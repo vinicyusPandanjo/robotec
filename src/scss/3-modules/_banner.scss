@@ -1,0 +1,96 @@
+.banner__temi {
+    background-color: $primary-color;
+    padding: 16px 0;
+    overflow-x: hidden;
+
+    position: fixed;
+    bottom: 1%;
+    width: 100%;
+
+
+
+
+    @media screen and (max-width: 870px) {
+        display: none;
+    }
+
+    .container {
+
+
+        flex-direction: row;
+        align-items: center;
+
+        @media screen and (max-width: 1120px) {
+            justify-content: space-evenly;
+        }
+
+        >img {
+            width: 98px;
+            height: 29px;
+            margin-right: 40px;
+            filter: brightness(0) invert(1);
+
+            @media screen and (max-width: 1120px) {
+                margin: 0;
+            }
+        }
+
+        .body__banner {
+
+
+            .title__banner {
+                text-transform: uppercase;
+                font: normal normal 300 18px/30px Roboto;
+
+                strong {
+                    font: normal normal bold 18px/30px Roboto;
+                }
+            }
+
+            .content__banner {
+
+                display: flex;
+                align-items: center;
+                gap: 90px;
+
+                @media screen and (max-width: 1120px) {
+                    gap: 16px;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    @include device(l) {
+                        background-color: red;
+                        display: none;
+                    }
+
+                    i {
+                        font-size: 22px;
+                    }
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+
+                    &:nth-child(1) {
+
+                        max-width: 300px;
+
+                        P {
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

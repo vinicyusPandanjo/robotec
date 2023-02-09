@@ -1,0 +1,16 @@
+.itens-temi {
+    .item-temi {
+        font: normal normal 300 16px/30px Roboto;
+        color: $gray-dark-color;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        i {
+
+            color: $primary-color;
+            font-weight: bold;
+        }
+
+    }
+}

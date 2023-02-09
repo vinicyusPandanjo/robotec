@@ -1,0 +1,199 @@
+.card {
+    background-color: $white-color;
+    padding: 25px 30px;
+    border: 1px solid $gray-lighter-color;
+    border-radius: 10px;
+    width: 266px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    @include device(sm) {
+        width: auto;
+        padding: 10px;
+    }
+
+
+    img {
+        width: 197px;
+        height: 197px;
+
+        @include device(sm) {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-body {
+        margin-top: 10px;
+
+
+
+        h4 {
+            color: $gray-dark-color;
+            font-weight: bold;
+            font-size: 18px;
+
+            @include device(sm) {
+                font-size: 16px;
+            }
+
+        }
+
+        p {
+            color: $gray-dark-color;
+            font-weight: 300;
+            line-height: 26px;
+            font-size: 16px;
+            margin-bottom: 5px;
+            margin-top: 15px;
+
+            @include device(sm) {
+                font-size: 14px;
+            }
+
+        }
+
+
+    }
+
+    .btn-saibaMais {
+        width: 100%;
+        margin-top: 10px;
+
+        @include device(sm) {
+            font-size: 14px;
+            padding: 10px;
+            height: 37px;
+
+            i {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.card-info {
+    background-color: $white-color;
+    border-radius: 10px;
+    border: 1px solid $gray-lighter-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    max-width: 548px;
+    padding: 20px;
+
+
+    .card-info-text {
+        h3 {
+
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .paragraph {
+            line-height: 26px;
+        }
+
+        height: 100%;
+
+    }
+}
+
+.boxTemi {
+
+    min-height: 356px;
+
+    &.colorBlue {
+        background-color: $primary-color;
+
+        .btn-VejaVideo {
+
+            &:hover {
+                color: $white-color;
+                background-color: $black-color;
+            }
+
+        }
+
+    }
+
+    &.colorBlack {
+        background-color: $black-color;
+
+        .btn-VejaVideo {
+
+            &:hover {
+                color: $white-color;
+                background-color: $primary-color;
+            }
+
+        }
+    }
+
+    .btn-VejaVideo {
+        @include device(sm) {
+            width: 100%;
+        }
+    }
+
+    color: $white-color;
+    padding: 40px 60px;
+
+
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1030px) {
+        padding: 40px 20px;
+
+    }
+
+    .h3 {
+        font: normal normal bold 25px/38px Roboto;
+        text-decoration: underline;
+    }
+
+    ul {
+        margin-bottom: 30px;
+
+        li {
+            font: normal normal 300 20px/38px Roboto;
+        }
+    }
+
+}
+
+.card-quemSomo {
+    width: 100%;
+    padding: 0px 10px 76px 20px;
+
+    background-color: $gray-color;
+
+    display: flex;
+    flex-direction: column;
+
+    >img {
+        width: 167px;
+        height: 167px;
+
+        margin: 30px auto;
+
+        border-radius: 50%;
+    }
+
+    .about-Profile {
+        color: $gray-light-color;
+
+        >strong {
+            font: normal normal bold 16px/30px Roboto;
+        }
+
+        >span {
+            font: italic normal 300 16px/30px Roboto;
+
+        }
+    }
+}

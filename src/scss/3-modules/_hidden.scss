@@ -1,0 +1,12 @@
+.hidden-desktop {
+    @media screen and (min-width: 576px) {
+        display: none !important;
+    }
+}
+
+.hidden-mobile {
+
+    @include device(sm) {
+        display: none !important;
+    }
+}

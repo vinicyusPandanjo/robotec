@@ -1,0 +1,226 @@
+.menu__mobile {
+    width: auto;
+
+
+    @media screen and (min-width: 870px) {
+        display: none;
+    }
+}
+
+#menu__toggle {
+    opacity: 0;
+
+    &:checked~.menu__btn {
+        width: 25px;
+
+    }
+
+    &:checked~.menu__btn>span {
+        transform: rotate(45deg);
+        width: 100%;
+        background-color: $white-color;
+    }
+
+    &:checked~.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0);
+        width: 100%;
+        background-color: $white-color;
+
+    }
+
+    &:checked~.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+        width: 100%;
+        background-color: $white-color;
+
+    }
+
+    &:checked~.menu__box {
+        visibility: visible;
+        left: 0;
+    }
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+
+    width: 40px;
+    height: 26px;
+
+    cursor: pointer;
+    z-index: 1;
+
+    @include device(sm) {
+        top: 4%;
+        right: 6%;
+
+    }
+
+    &>span,
+    &>span::before,
+    &>span::after {
+        display: block;
+        position: absolute;
+
+        width: 100%;
+        height: 2px;
+
+
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    &>span {
+        width: 75%;
+        right: 0;
+        background-color: $primary-color;
+    }
+
+    &>span::before {
+        content: '';
+        width: 40px;
+        top: -8px;
+        right: 1px;
+        ;
+    }
+
+    &>span::after {
+        content: '';
+        width: 50%;
+        top: 8px;
+        right: 0;
+    }
+}
+
+.menu__box {
+    background-color: $black-color;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+    visibility: hidden;
+    left: -100%;
+    top: 0;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+    transition-duration: .25s;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+
+    .menu__box_itens {
+
+        margin-top: 40px;
+        padding: 10px 0;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media screen and (max-width: 340px) {
+            gap: 8px;
+        }
+
+
+        >img {
+            height: 330px;
+
+            @media screen and (max-width: 340px) {
+                height: 280px;
+            }
+        }
+
+        .lista__itens-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+
+            justify-content: center;
+
+            .link-menu {
+                color: $white-color;
+                font-size: 16px;
+                letter-spacing: 1.6px;
+            }
+
+        }
+    }
+
+
+    .destaque__produto-menu {
+
+        margin-top: 20px;
+        margin-left: 30px;
+
+        .title {
+            color: $white-color;
+        }
+
+        .destaque__produto-slide {
+            margin: 40px 0;
+
+
+
+
+            .box-menu__produto {
+                padding-top: 11px;
+                background-color: $white-color;
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                margin: 0 5px;
+
+                width: 30% !important;
+
+
+
+                img {
+                    width: 123px;
+                    height: 123px;
+                    margin: 0 auto;
+                }
+
+                .text {
+
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 15px 15px 15px;
+
+
+                    h4 {
+                        font-size: 16px;
+                        color: $gray-dark-color;
+                    }
+
+                    .btn-saibaMais {
+                        width: 100%;
+                        height: 37px;
+                        margin-top: 20px;
+                        font-size: 14px;
+                        padding: 0 10px;
+
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}

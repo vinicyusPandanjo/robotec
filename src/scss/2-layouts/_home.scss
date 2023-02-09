@@ -1,0 +1,69 @@
+.topo-home {
+    background-color: black;
+    position: relative;
+    margin-bottom: 330px;
+    width: 100%;
+
+    @include device(md) {
+        margin-bottom: 0;
+    }
+
+    .bg-topo {
+
+        height: 620px;
+
+        background-image: url("../image/robotec.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+
+
+        @include device(md) {
+            justify-content: flex-end;
+        }
+
+        @include device(sm) {
+            height: 373px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            background-image: url("../image/robotec-mobile.png");
+        }
+
+    }
+
+
+    .container-info-top {
+
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin-left: 50%;
+
+        @include device(l) {
+            padding-right: 10px;
+        }
+
+        @include device(md) {
+            margin-left: 38%;
+
+        }
+
+        @include device(sm) {
+            margin-left: 40%;
+
+        }
+
+
+
+        .text-img {
+            margin-bottom: 25px;
+
+            @include device(l) {
+                width: 100%;
+            }
+        }
+    }
+}

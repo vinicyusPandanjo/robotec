@@ -1,0 +1,145 @@
+.box-info {
+    background-color: $gray-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(95%, 1112px);
+    overflow-x: hidden;
+    border-radius: 10px;
+
+    box-shadow: inset 0 -50px white;
+    position: absolute;
+
+
+    min-height: 260px;
+
+    left: 50%;
+
+    transform: translate(-50%, -10%);
+
+    @include device(l) {
+
+        padding: 0 10px;
+
+        img {
+            width: 20%;
+
+
+        }
+    }
+
+    @include device(md) {
+        display: none;
+    }
+
+    .img-display-none {
+        @media screen and (max-width: 870px) {
+            display: none;
+        }
+
+    }
+
+
+
+
+
+    .container-info-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        align-self: flex-start;
+        margin-top: 20px;
+        gap: 18px;
+
+        @include device(xl) {
+            gap: 12px;
+        }
+
+        img {
+
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .info-card {
+
+
+            h3 {
+                font-size: 20px;
+                color: #000;
+                letter-spacing: 2px;
+                margin-bottom: 18px;
+                white-space: nowrap;
+
+                @include device(xl) {
+                    font-size: 18px;
+                }
+            }
+
+            p {
+
+                color: #000000;
+                font-weight: 300;
+                width: 80%;
+                margin-bottom: 18px;
+
+            }
+        }
+
+
+    }
+
+
+}
+
+.box-info-mobile {
+    background-color: $gray-color;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    height: 192px;
+
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: inset 0 -15px white;
+
+    img {
+        height: 100%;
+
+    }
+
+    .image-box {
+        height: 150px;
+
+        &.invert__image {
+
+            height: 130px;
+            margin-bottom: -11px;
+        }
+    }
+
+    .content-text {
+
+
+        h3 {
+            font: normal normal bold 13px/15px Roboto;
+            letter-spacing: 1.3px;
+            color: $black-color;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font: normal normal 300 16px/26px Roboto;
+            color: $black-color;
+            margin-bottom: 10px;
+
+        }
+
+        .btn-saibaMais {
+
+
+            font: normal normal bold 16px/30px Roboto
+        }
+    }
+}

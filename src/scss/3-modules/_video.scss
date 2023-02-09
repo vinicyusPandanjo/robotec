@@ -1,0 +1,9 @@
+.video {
+
+    width: min(100%, 715px);
+    height: 405px;
+
+    @include device(l) {
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,19 @@
+.hover-menu {
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover~ul.submenu-panda {
+
+        background-color: rgba(255, 255, 255, 0.74);
+        display: block;
+
+    }
+}
+
+.hover-img {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
